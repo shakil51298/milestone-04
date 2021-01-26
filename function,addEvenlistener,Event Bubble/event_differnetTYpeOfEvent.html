@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript event(managemnet)</title>
+    <style>
+        button{
+            color: red;
+            padding: 10px 16px ;
+            background-color: white;
+            box-shadow: 7px 5px 10px gray;
+            border: none;
+            font-size: 18px;
+            border-radius: 10px;
+            outline: none;
+        }
+        button:click{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="clickm()">Exploring Event // it for Oneclick</h1>
+    <h1 onmouseup="mouseUp()">Onmouse up // </h1>
+    <button onmouseout="clickm()"><a href="#"> Click Me</a></button>
+    <button onmouseout="clickm()"><a href="#"> Click Me</a></button>
+    <button onmouseout="clickm()"><a href="#"> Click Me</a></button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aliquid sunt fuga, aperiam minus ad accusantium nisi quasi quidem suscipit, nobis molestias voluptate nemo! Praesentium, consequuntur? Reiciendis nostrum repudiandae vel commodi consequatur repellat odit laboriosam similique numquam minima natus eius, rem autem quasi et quisquam eum nam distinctio tempore quod nemo consequuntur. Voluptas perspiciatis eaque impedit ad! Temporibus recusandae eum, tempore harum quia beatae hic quos, dolore voluptate ipsum reiciendis.</p>
+    
+    <!-- First way to Define a clickHandler -->
+    <script>
+        function clickm(){
+           alert(new Date());
+        }
+        function mouseUp(){
+           console.log('onMouseUp');
+        }
+    </script>
+
+    <button>click me-1</button>
+    <button id="specific-btn">specific-btn</button>
+    <button>click me-3</button>
+    <button id='shakil'>click me-4</button>
+
+ <!-- second Way to define a ClickHandler -->
+    <!-- <script>
+        function click(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        var second = document.getElementById('specific-btn');
+        second.ondblclick = click;
+    </script> -->
+    <!-- third Way to Define a clickHandler (MORDERN WAY): EventrListener -->
+
+
+    <script>
+        // function click(){
+        //     document.body.style.backgroundColor = 'lightgray';  
+        // }
+        // var second = document.getElementById('specific-btn');
+        // second.addEventListener('click', click);
+        document.getElementById('shakil').addEventListener('click', function(){
+            document.body.style.color = 'red';
+        })
+    </script>
+</body>
+</html>

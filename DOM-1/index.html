@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="DOM.js"></script>
+
+</head>
+
+<body>
+    <article id="shakil">
+        <h3 title="this is shakil khan">shakil</h3>
+        <p class="author">author-1</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat possimus molestias
+            necessitatibus quis sit reiciendis? At expedita amet magnam reprehenderit illum eum dolore voluptas
+            praesentium ab! Unde porro nulla laudantium?</p>
+    </article>
+    <article class="special">
+        <h3>article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">Esse earum iure, nesciunt placeat vel perspiciatis magni quo omnis ratione
+            recusandaelaborum explicabo eius consectetur a cum sapiente aperiam? Laborum voluptatibus fuga eveniet,
+            deleniti qui quae commodi eos adipisci?</p>
+    </article>
+    <article class="special">
+        <h3>article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">Nobis voluptatum dicta corrupti nemo pariatur nesciunt veritatis enim esse nihil delectus
+            provident dolorum, modi necessitatibus in est, natus atque nisi mollitia sit adipisci! Ex sapiente sequi
+            labore tenetur ea.</p>
+    </article>
+    <article>
+        <h3>New List</h3>
+        <ul id="NewList">
+            <li>gift item-1</li>
+            <li>gift item-2</li>
+            <li>gift item-3</li>
+            <li>gift item-4</li>
+            <li>gift item-5</li>
+        </ul>
+    </article>
+    <script>
+        // how to add new paragraph with javaScript
+        var shakils = document.getElementById('shakil');
+        var newParagraph = document.createElement('p');
+        newParagraph.innerText = 'this is new paragraph that added by JavaScript';
+        shakils.appendChild(newParagraph);
+
+        var ul = document.getElementById('NewList');
+        var li = document.createElement('li');
+        li.innerHTML = 'new list is this';
+        ul.appendChild(li);
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>
