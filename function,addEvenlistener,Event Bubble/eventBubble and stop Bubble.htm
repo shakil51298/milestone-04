@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <div id="conatiner">
+        <h1>My list</h1>
+        <ul id="myList">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Eveniet, natus dolores.</li>
+            <li class="item">Id, quam dolores.</li>
+            <li class="item">Aliquid, labore saepe.</li>
+            <li class="item">Sunt, minus omnis.</li>
+        </ul>
+        <button id="add New">Add New</button>
+    </div> 
+    <script>
+    //    var items =  document.getElementsByClassName('item');
+    //     for (let i = 0; i < items.length; i++) {
+    //         const item = items[i];
+    //         item.addEventListener('click',function(event){
+    //             console.log(this.innerText,event.target.innerText,this.parentNode.removeChild(this));//this and target are same
+    //         })
+    //     }
+        document.getElementById('add New').addEventListener('click', function(event){
+            var newParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText='Brand New Item';
+            newParent.appendChild(newItem);                  
+        });
+
+        // event Bubble
+        // document.getElementById('first').addEventListener('click',function(){
+        //     console.log('first item clicked');
+        //     event.stopPropagation()  //this line stop the bubble propragation(মানে কন্টিনিউ করা অফ করে দিয়েছে।)
+        // });
+        document.getElementById('myList').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        });
+        // document.getElementById('conatiner').addEventListener('click',function(){
+        //     console.log('conatiner item clicked');
+        //     event.stopPropagation()
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why need funtion return</title>
+</head>
+
+<body>
+    <h2>TOTAL = $<span id="shakil">00</span></h2>
+    <h2>TOTAL = $<span id="second">00</span></h2>
+    <h2>TOTAL = $<span id="third">00</span></h2>
+    <script>
+        function DisplayPrice(phone, casing) {
+            const PhonePriec = 500;
+            const CasingPrice = 30;
+            const totalPhonePrice = phone * PhonePriec;
+            const totaCasingPrice = casing * CasingPrice;
+            const total = totaCasingPrice + totalPhonePrice;
+            return total;
+
+        }
+        var shakils = DisplayPrice(1,3);
+        document.getElementById('shakil').innerText = shakils;
+        const forsSecond = DisplayPrice(54.,65);
+        document.getElementById('second').innerText = forsSecond;
+
+       
+            var shakilss = DisplayPrice(1,3);
+            document.getElementById('third').innerText = shakilss;
+
+    </script>
+</body>
+
+</html>
